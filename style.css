@@ -15,7 +15,7 @@
 
 .nav-bar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     line-height: 55px;
     width: 100%;
@@ -24,13 +24,20 @@
 }
 .nav-logo {
     display: flex;
+    background: #0c22a0;
+    border-radius: 5px;
+    top: 2px;
+    left: 5px;
+    position: relative;
+    z-index: 1;
 }
-.nav-logo {
+.nav-logo a {
     color: #fff;
+    text-decoration: none;
 }
 ul {
     display: flex;
-    gap: 25px;
+    gap: 15px;
 }
 ul li {
     list-style-type: none;
@@ -48,11 +55,33 @@ ul li a {
 .bx {
     color: #fff;
     cursor: pointer;
+    display: none;
 }
 .bx:hover {
     background: #78909c;
 }
-
+.search-bar {
+    position: relative;
+    width: 300px;
+    
+}
+.search-bar input {
+    width: 100%;
+    padding: 2px 10px 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    border: none;
+}
+.search-bar i {
+    position: absolute;
+    top: 55%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #888;
+    /* pointer-events: none; */
+    cursor: pointer;
+}
 .div-quote {
     background-image: url(backimage.png);
     background-size: cover;
@@ -70,12 +99,21 @@ ul li a {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 500px;
+    width: 600px;
+    height: 150px;
     margin: auto;
     background: #f0f0f0;
+    position: relative;
+    top: 15px;
+    /* background: transparent; */
 }
-h3 {
+
+h2 {
     text-align: center;
+    color: black ;
+    padding-top: 20px;
+    
+    
 }
 .quote-display {
     flex: 1;
@@ -97,18 +135,18 @@ h3 {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 45px;
     
 }
 .reaction-button button:hover {
     background: #e0e0e0;
 }
 .like-button.active {
-    background: #d4edda;
+    background: #00FF00;
     border-color: #c3e6cb;
 }
 .dislike-button.active {
-    background: #f8d7da;
+    background: red;
     border-color: #f5c6cb;
 }
 .like-button, .dislike-button {
