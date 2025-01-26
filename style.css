@@ -103,9 +103,10 @@ ul li a {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 600px;
-    height: 150px;
-    margin: auto;
+    /* width: 600px;
+    height: 150px; */
+    margin-left: 20px;
+    margin-right: 20px;
     background: #f0f0f0;
     position: relative;
     top: 15px;
@@ -125,7 +126,7 @@ h2 {
 }
 .prev-button, .next-button {
     background: #f0f0f0;
-    border: 1px solid #ccc;
+    border: 0px solid #ccc;
     padding: 10px;
     border-radius: 5px;
     font-size: 16px;
@@ -171,9 +172,10 @@ h2 {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 600px;
-    height: 150px;
-    margin: auto;
+    /* width: 600px;
+    height: 150px; */
+    margin-left: 20px;
+    margin-right: 20px;
     background: #f0f0f0;
     position: relative;
     top: 15px;
@@ -196,6 +198,23 @@ footer {
     width: 100%;
     height: 100px;
     background: black;
+}
+
+/* mediaquery for mobile */
+
+@media only screen and (max-width: 640px) {
+    ul li {
+        display: none;
+    }
+    .bx {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .nav-logo {
+        margin-left: 20px;
+    }
+    
+    
 }
 
 
