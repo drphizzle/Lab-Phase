@@ -202,6 +202,7 @@ footer {
     background: black;
     padding: 10px 0;
     
+    
 }
 
 
@@ -225,7 +226,7 @@ footer {
     display: block; /* Ensure icons are on separate lines */
     font-size: 14px;
     margin-top: 5px;
-}
+} 
 
 /* Footer logo section */
 
@@ -239,7 +240,7 @@ footer {
     margin: 0 3px; /* Space between letters */
     text-decoration: none;
     font-weight: bold;
-}
+} 
 
 /* Footer links section */
 .footer-links {
@@ -267,16 +268,52 @@ footer {
     color: lightgray;
 }
 
+
+
 /* mediaquery for mobile */
 
 @media only screen and (max-width: 640px) {
-    ul li {
+    /* .ul-menu li {
         display: none;
-    }
+    } */
     .menu-icon {
         display: inline-block;
         margin-right: 15px;
     }
+
+    /* nav-menu display for smaller screen */
+    
+    .ul-menu {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: fixed;
+        top: 60px;
+        /* right: 10px; */
+        left: 0;
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+        z-index: 1;
+    }
+    .ul-menu.active {
+        display: flex;
+    }
+    .ul-menu li {
+        text-align: center;
+        border-bottom: 1px solid #444;
+
+    }
+    .ul-menu li:last-child {
+        border-bottom: none;
+    }
+    
+
+    /*  */
+
+
     .nav-logo {
         margin-left: 15px;
     }
@@ -313,6 +350,8 @@ footer {
     .search-bar {
         width: 220px; /* Reduce width to create space */
     }
+
+    
     
 }
 
