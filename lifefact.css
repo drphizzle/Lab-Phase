@@ -88,10 +88,12 @@ ul li a {
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding: 20px;
-    
-    
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
 }
+
 .life {
     width: 350px;
     height: 300px;
@@ -101,17 +103,183 @@ ul li a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
     
+
+    
 }
 .author {
     margin-top: 25px;
 }
+
 .one {
     background-image: url(images1.jpg);
     background-size: cover;
-    margin-top: 30px;
-    
+    /* margin-top: 30px; */
+    position: relative;
+    /* top: -30px; */
 }
 .two {
     background-image: url(images2.jpg);
     background-size: cover;
+}
+.three {
+    background-image: url(images3.jpg);
+    background-size: cover;
+}
+.four {
+    background-image: url(images4.jpg);
+    background-size: cover;
+}
+.five {
+    background-image: url(images5.jpg);
+    background-size: cover;
+}
+.six {
+    background-image: url(images6.jpg);
+    background-size: cover;
+}
+
+footer {
+    background: black;
+    padding: 10px 0;
+}
+
+
+/* General footer styles */
+
+.first-footer, .footer-logo, .footer-links {
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+
+/* First footer section */
+
+.first-footer {
+    font-size: 12px;
+    color: whitesmoke;
+    line-height: 1.4;
+}
+
+.first-footer i {
+    display: block; /* Ensure icons are on separate lines */
+    font-size: 14px;
+    margin-top: 5px;
+} 
+
+/* Footer logo section */
+
+.footer-logo {
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.footer-logo span a {
+    font-size: 18px;
+    margin: 0 3px; /* Space between letters */
+    text-decoration: none;
+    font-weight: bold;
+} 
+
+/* Footer links section */
+.footer-links {
+    font-size: 14px;
+    
+}
+
+.footer-links p {
+    margin: 3px 0;
+}
+.copyright {
+    font-size: 13px;
+    color: #0000CC;
+    text-align: center;
+}
+
+.footer-links h5 {
+    font-size: 14px;
+    margin: 1px 0;
+    color: whitesmoke;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+/* for smaller screen */
+
+@media only screen and (max-width: 640px) {
+    .menu-icon {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    .ul-menu {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: fixed;
+        top: 60px;
+        /* right: 10px; */
+        left: 0;
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+        z-index: 1;
+    }
+    .ul-menu.active {
+        display: flex;
+    }
+    .ul-menu li {
+        text-align: center;
+        border-bottom: 1px solid #444;
+
+    }
+    .ul-menu li:last-child {
+        border-bottom: none;
+    }
+    .nav-logo {
+        margin-left: 15px;
+    }
+    .search-bar {
+        margin: 0 auto; 
+        right: 0; 
+        left: 0;
+    }
+    .life-facts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .first-footer, .footer-logo, .footer-links {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer-logo {
+        font-size: 20px; /* Adjust logo font size */
+    }
+
+    .footer-logo span a {
+        font-size: 18px; /* Adjust individual letters */
+    }
+
+    .first-footer i {
+        font-size: 16px; /* Resize icons */
+    }
+
+    .footer-links h5 {
+        font-size: 14px; /* Reduce link size */
+    }
+
+    .footer-links p {
+        margin: 5px 0; /* Reduce spacing between links */
+    }
+
+    .search-bar {
+        width: 220px; /* Reduce width to create space */
+    }
+    
 }
