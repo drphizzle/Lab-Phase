@@ -1,3 +1,5 @@
+console.log("JavaScript is running on", document.title);
+
 const quotes = [
     '"To be successful in life is not an easy road... Legit is hard, illegit is even harder. You just have to choose your own hard but most importantly. choose wisely." - Phil Godwin',
     '"A person who never made a mistake never tried anything new." - Albert Einstein',
@@ -69,14 +71,21 @@ function updateLifeFact() {
     lifeFactElement.textContent = lifeFacts[currentLifeFactIndex];
     resetReactions();
 }
-preButton.addEventListener('click', () => {
-    currentLifeFactIndex = (currentLifeFactIndex - 1 + lifeFacts.length) % lifeFacts.length;
-    updateLifeFact();
-});
-nexButton.addEventListener('click', () => {
-    currentLifeFactIndex = (currentLifeFactIndex + 1) % lifeFacts.length;
-    updateLifeFact();
-});
+if(prevButton){
+    preButton.addEventListener('click', () => {
+        currentLifeFactIndex = (currentLifeFactIndex - 1 + lifeFacts.length) % lifeFacts.length;
+        updateLifeFact();
+    });
+}
+//To catch any error 
+try{
+    nexButton.addEventListener('click', () => {
+        currentLifeFactIndex = (currentLifeFactIndex + 1) % lifeFacts.length;
+        updateLifeFact();
+    });
+}catch (error){
+ console.log(error)
+}
 function resetReact() {
     likButton.classList.remove('active');
     dislikButton.classList.remove('active');
@@ -95,20 +104,8 @@ dislikButton.addEventListener('click', () => {
 });
 updateLifeFact();
 
-// adding click event to the menu-icon
 
 
-    const menuIcon = document.querySelector('.menu-icon');
-    const navMenu = document.querySelector('.ul-menu');
+
+
     
-    menuIcon.addEventListener('click', () => {
-        navMenu.classList.toggle("active");
-    });
-
-    // close menu after clicking on a link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove("active");
-        });
-
-    });
