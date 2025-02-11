@@ -64,11 +64,11 @@
                     </fieldset>
                     <fieldset>
                         <legend>Are you a deep thinker?</legend>
-                        <label for="response" style="display: block;">
+                        <label for="response" style="display: flex; gap: 5px;">
                             <input type="radio" name="response" id="response" value="yes">
                         Yes</label>
-                        <label>
-                            <input type="radio" name="response" value="no">
+                        <label for="response" style="display: flex; gap: 5px;">
+                            <input type="radio" name="response" value="no" id="response">
                         No</label>
                     </fieldset>
                     <fieldset>
@@ -76,21 +76,23 @@
                         <label for="text"></label>
                         <textarea name="text" id="text"></textarea>
                         <div class="check">
-                            <label for="checkbox">
-                                <input type="checkbox" name="checkbox" id="checkbox" value="checkbox">Subscribe to our daily quotes/lifefacts.
+                            
+                                <input type="checkbox" name="checkbox" id="checkbox" value="checkbox">
+                                <label for="checkbox">Subscribe to our daily quotes/lifefacts.
                             </label>
                         </div>
-                        <div>
+                        <div class="gen-code">
                             <label for="generatedCode">Code to Enter:</label>
                             <input type="text" id="generatedCode" name="text" readonly>
                         </div>
-                        <div>
+                        <div class="enter-code">
                             <label for="userCode">Enter Code:</label>
                             <input type="text" id="userCode" required placeholder="Enter the code above">
                         </div>
-                        <button type="submit">Submit</button>
+                        <button type="submit" class="sub-btn">Submit</button>
                         <p id="message"></p>
                     </fieldset>
+                    
                 </form>
             </div>
         </main>
