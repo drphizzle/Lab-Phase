@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header styling */
+.header-container {
+    background: #330033;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    
+
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    line-height: 55px;
+    width: 100%;
+    height: 100px;
+    
+}
+.nav-logo {
+    display: flex;
+    margin-left: 30px;
+}
+.nav-logo a {
+    text-decoration: none;
+    font-weight: bold;
+}
+ul {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    right: -100px;
+}
+ul li {
+    list-style-type: none;
+}
+ul li a h4:hover {
+    background: #660099;
+}
+ul li h4 {
+    color: #fff;
+    
+}
+ul li a {
+    text-decoration: none;
+}
+.menu-icon {
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+.menu-icon:hover {
+    background: #78909c;
+}
+.search-bar {
+    position: relative;
+    width: 300px;
+    display: inline-block;
+    right: -140px;
+    
+}
+.search-bar input {
+    width: 100%;
+    padding: 2px 10px 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    border: none;
+    box-sizing: border-box;
+}
+.search-bar i {
+    position: absolute;
+    top: 55%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #888;
+    /* pointer-events: none; */
+    cursor: pointer;
+}
+
+/* the form styling */
+form {
+    padding: 15px;
+}
+
+legend {
+    text-align: center;
+    color: #444;
+}
+fieldset {
+    padding: 10px;
+    border: .1px solid gray;
+    border-radius: 5px;
+}
+input {
+    padding: 2px;
+}
+.name input {
+    width: 200px;
+    box-sizing: border-box;
+}
+#text {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.check {
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+    margin: 10px;
+    
+}
+.check input {
+    position: relative;
+    left: -10px;
+    
+}
+
+/* footer styling */
+footer {
+    background: black;
+    padding: 10px 0;
+}
+
+
+/* General footer styles */
+
+.first-footer, .footer-logo, .footer-links {
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+
+/* First footer section */
+
+.first-footer {
+    font-size: 12px;
+    color: whitesmoke;
+    line-height: 1.4;
+}
+
+.first-footer i {
+    display: block; /* Ensure icons are on separate lines */
+    font-size: 14px;
+    margin-top: 5px;
+} 
+
+/* Footer logo section */
+
+.footer-logo {
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.footer-logo span a {
+    font-size: 18px;
+    margin: 0 3px; /* Space between letters */
+    text-decoration: none;
+    font-weight: bold;
+} 
+
+/* Footer links section */
+.footer-links {
+    font-size: 14px;
+    
+}
+
+.footer-links p {
+    margin: 3px 0;
+}
+.copyright {
+    font-size: 13px;
+    color: #0000CC;
+    text-align: center;
+}
+
+.footer-links h5 {
+    font-size: 14px;
+    margin: 1px 0;
+    color: whitesmoke;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+/* for smaller screen */
+
+@media only screen and (max-width: 640px) {
+    .menu-icon {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    .ul-menu {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: fixed;
+        top: 60px;
+        /* right: 10px; */
+        left: 0;
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+        z-index: 1;
+    }
+    .ul-menu.active {
+        display: flex;
+    }
+    .ul-menu li {
+        text-align: center;
+        border-bottom: 1px solid #444;
+
+    }
+    .ul-menu li:last-child {
+        border-bottom: none;
+    }
+    .nav-logo {
+        margin-left: 15px;
+    }
+    .search-bar {
+        margin: 0 auto; 
+        right: 0; 
+        left: 0;
+    }
+    .first-footer, .footer-logo, .footer-links {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer-logo {
+        font-size: 20px; /* Adjust logo font size */
+    }
+
+    .footer-logo span a {
+        font-size: 18px; /* Adjust individual letters */
+    }
+
+    .first-footer i {
+        font-size: 16px; /* Resize icons */
+    }
+
+    .footer-links h5 {
+        font-size: 14px; /* Reduce link size */
+    }
+
+    .footer-links p {
+        margin: 5px 0; /* Reduce spacing between links */
+    }
+
+    .search-bar {
+        width: 220px; /* Reduce width to create space */
+    }
+    
+}

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <title>Lab Phase Project</title>
-    <link rel="stylesheet" href="lifefact.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <!-- The header container -->
@@ -45,40 +45,56 @@
         </div>
         </nav>
     </header>
-        
-    <!-- Lifefact container -->
+        <main>
+            <div class="form-container">
+                <form action="" id="mainForm">
+                    <fieldset class="name">
+                        <legend>Provide your name</legend>
+                        <label for="first-name">First name:</label>
+                            <input type="text" name="name" id="first-name">
+                            <label for="last-name">Last name:</label>
+                            <input type="text" name="name" id="last-name">
+                    </fieldset>
+                    <fieldset class="name">
+                        <legend>Provide your contact details</legend>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email">
+                        <label for="phonenumber">Phone number:</label>
+                        <input type="text" name="phonenumber" id="phonenumber" placeholder="Optional">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Are you a deep thinker?</legend>
+                        <label for="response" style="display: block;">
+                            <input type="radio" name="response" id="response" value="yes">
+                        Yes</label>
+                        <label>
+                            <input type="radio" name="response" value="no">
+                        No</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Type your message</legend>
+                        <label for="text"></label>
+                        <textarea name="text" id="text"></textarea>
+                        <div class="check">
+                            <label for="checkbox">
+                                <input type="checkbox" name="checkbox" id="checkbox" value="checkbox">Subscribe to our daily quotes/lifefacts.
+                            </label>
+                        </div>
+                        <div>
+                            <label for="generatedCode">Code to Enter:</label>
+                            <input type="text" id="generatedCode" name="text" readonly>
+                        </div>
+                        <div>
+                            <label for="userCode">Enter Code:</label>
+                            <input type="text" id="userCode" required placeholder="Enter the code above">
+                        </div>
+                        <button type="submit">Submit</button>
+                        <p id="message"></p>
+                    </fieldset>
+                </form>
+            </div>
+        </main>
 
-    <div class="life-facts">
-
-        
-
-        <div class="life one">
-        <p class="para">"Things are always beautiful from afar, not all the glitters is gold. But there are somethings that look ugly from afar and look beautiful nearer. Don't judge a book by its cover."</p>
-            <p class="author">O. neri P</p> 
-        </div>
-        <div class="life two">
-            <p>"It is surprising how people don't have the patience of dedicating time of building their own business but surprisingly patient for 35yrs working for someone else."</p>
-            <p class="author">Phil Godwin</p>
-        </div>
-        <div class="life three">
-            <p>"To accomplish great things we must not only act, but also dream; not only plan, but also believe."</p>
-            <p class="author">Anatole France</p>
-        </div>
-        <div class="life four">
-            <p>"God puts people in your life for a reason and removes them from your life for a better reason."</p>
-            <p class="author">LifeFacts</p>
-        </div>
-        <div class="life five">
-            <p>"If everyone is happy with you, then surely you have made many compromises in your life.
-                If you are happy with everyone, surely you have ignored many faults of others."</p>
-                <p class="author">Code X</p>
-        </div>
-        <div class="life six">
-            <p>"Anyone who stops learning is old whether at twenty or eighty. Anyone who keeps learning stays young. The greatest thing in life is to keep your mind young."</p>
-            <p class="author">Henry Ford</p>
-        </div>
-
-    </div>
 
     <footer>
         <div class="first-footer">
@@ -112,7 +128,7 @@
         
         </footer>
 
-    <script src="script.js"></script>
+    
     <script src="menu.js"></script>
     
 
