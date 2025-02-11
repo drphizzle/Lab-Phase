@@ -104,7 +104,7 @@ dislikButton.addEventListener('click', () => {
 });
 updateLifeFact();
 
-
+alert("This site is under construction. Check back later!");
 
 
 
