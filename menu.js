@@ -37,6 +37,6 @@ document.getElementById('mainForm').addEventListener("submit", function(event) {
         event.preventDefault();
         document.getElementById('message').innerText = "incorrect code. Please try again.";
     } else {
-        alert ("Code is correct! Form submitted.")[;]
+        alert ("Code is correct! Form submitted.")
     }
 });
