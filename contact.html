@@ -46,6 +46,7 @@
         </nav>
     </header>
         <main>
+            <h3 class="contact-us">Contact Us*</h3>
             <div class="form-container">
                 <form action="" id="mainForm">
                     <fieldset class="name">
@@ -82,13 +83,17 @@
                             </label>
                         </div>
                         <div class="gen-code">
-                            <label for="generatedCode">Code to Enter:</label>
-                            <input type="text" id="generatedCode" name="text" readonly>
+                            <label for="generatedCode">Code to Enter:
+                            <!-- <input type="text" id="generatedCode" name="text" readonly> -->
+                            <span class="display"></span>
+                            
                         </div>
                         <div class="enter-code">
                             <label for="userCode">Enter Code:</label>
                             <input type="text" id="userCode" required placeholder="Enter the code above">
                         </div>
+                        
+                        
                         <button type="submit" class="sub-btn">Submit</button>
                         <p id="message"></p>
                     </fieldset>

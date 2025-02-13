@@ -84,6 +84,10 @@ ul li a {
     cursor: pointer;
 }
 
+.contact-us {
+    padding: 10px;
+}
+
 /* the form styling */
 form {
     padding: 15px;
@@ -121,12 +125,12 @@ input {
     margin-top: 15px;
     margin-bottom: 15px;
 }
-.gen-code input {
+.gen-code span {
     padding: 3px;
     color: #0000CC;
-    font-size: 18px;
-    font-weight: 600;
-    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    
 }
 .enter-code {
     margin-bottom: 15px;
@@ -143,6 +147,7 @@ input {
     border-radius: 3px;
     width: 70px;
     border: none;
+    cursor: pointer;
 }
 
 /* footer styling */

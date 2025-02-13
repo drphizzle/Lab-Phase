@@ -20,11 +20,37 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
 function generateCode() {
     let characters = "ABCDEFGHIJKLMNOPQRSTUVWXZY0123456789";
     let code ="";
+    // for (let i = 0; i < 6; i++ ) {
+    //     code += characters.charAt(Math.floor(Math.random() * characters.length));
+    // }
+    // return code;
+
     for (let i = 0; i < 6; i++ ) {
-        code += characters.charAt(Math.floor(Math.random() * characters.length));
+        let randomIndex = Math.floor(Math.random() * characters.length);
+        let randomChar = characters.charAt(randomIndex);
+        
+
+        let randomColor = getRandomColor();
+
+    code += `<span style="color: ${randomColor};">${randomChar}</span>`;
     }
-    return code;
-}
+
+    document.querySelector('.display').innerHTML = code;
+    
+};
+
+
+
+
+
+// To display the code in multiple colors
+function getRandomColor() {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+};
+
 
 // Display the generated code in the input field
 let codeInput = document.getElementById('generatedCode');
@@ -33,6 +59,7 @@ codeInput.value = generateCode();
 // Form submission validation
 document.getElementById('mainForm').addEventListener("submit", function(event) {
     let userCode = document.getElementById('userCode').value;
+    
     if (userCode !== codeInput.value) {
         event.preventDefault();
         document.getElementById('message').innerText = "incorrect code. Please try again.";
