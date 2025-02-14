@@ -71,7 +71,7 @@ function updateLifeFact() {
     lifeFactElement.textContent = lifeFacts[currentLifeFactIndex];
     resetReactions();
 }
-if(prevButton){
+if(preButton){
     preButton.addEventListener('click', () => {
         currentLifeFactIndex = (currentLifeFactIndex - 1 + lifeFacts.length) % lifeFacts.length;
         updateLifeFact();

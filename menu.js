@@ -18,7 +18,7 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
 
 // Generate a random 6-character code
 function generateCode() {
-    let characters = "ABCDEFGHIJKLMNOPQRSTUVWXZY0123456789";
+    let characters = "ABCDEFGHIJKLMNOPQRSTUVWXZYabcdefghijklmnopqrstuvwxyz0123456789";
     let code ="";
     // for (let i = 0; i < 6; i++ ) {
     //     code += characters.charAt(Math.floor(Math.random() * characters.length));
