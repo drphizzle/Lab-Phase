@@ -84,6 +84,7 @@ ul li a {
     cursor: pointer;
 }
 
+
 .contact-us {
     padding: 15px;
     margin: 10px;
@@ -91,6 +92,11 @@ ul li a {
 }
 
 /* the form styling */
+.form-container {
+    background: #f5f1f1;
+    
+}
+
 form {
     padding: 15px;
 }
@@ -104,10 +110,11 @@ fieldset {
     margin: 10px;
     border: .1px solid gray;
     border-radius: 5px;
-    width: 50%;
+    width: 65%;
 }
 input {
     padding: 2px;
+    
 }
 .name input {
     width: 200px;

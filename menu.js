@@ -40,10 +40,8 @@ function generateCode() {
 };
 
 
-
-
-
 // To display the code in multiple colors
+
 function getRandomColor() {
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
@@ -52,18 +50,25 @@ function getRandomColor() {
 };
 
 
-// Display the generated code in the input field
+// Display the generated code in the span field
 let codeInput = document.getElementById('generatedCode');
 codeInput.value = generateCode();
 
 // Form submission validation
-document.getElementById('mainForm').addEventListener("submit", function(event) {
+
+    document.getElementById('mainForm').addEventListener("submit", function(event) {
     let userCode = document.getElementById('userCode').value;
+    let codeInput = document.getElementById('generatedCode').textContent;
     
-    if (userCode !== codeInput.value) {
+
+    if (userCode !== codeInput) {
         event.preventDefault();
         document.getElementById('message').innerText = "incorrect code. Please try again.";
     } else {
         alert ("Code is correct! Form submitted.")
     }
+    
 });
+
+
+
