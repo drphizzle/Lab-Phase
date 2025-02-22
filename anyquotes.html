@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="lifefact.css">
+    <title>Lab Phase Project</title>
+
+    <style>
+        body {
+            background: rgb(201, 132, 155);
+        }
+        .div-display {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+     <!-- The header container -->
+
+     <header class="header-container">
+        <nav class="nav-bar">
+            <div class="nav-logo">
+                <!-- <p><a href="#">L.i.F.e.F.a.C.t.S</a></p> -->
+                <span><a style="color: whitesmoke" href="#">L.</a></span>
+                <span><a style="color: blueviolet" href="#">i.</a></span>
+                <span><a style="color: paleturquoise" href="#">F.</a></span>
+                <span><a style="color: red" href="#">e.</a></span>
+                <span><a style="color: greenyellow" href="#">F.</a></span>
+                <span><a style="color: teal" href="#">a.</a></span>
+                <span><a style="color: blue" href="#">C.</a></span>
+                <span><a style="color: brown" href="#">t.</a></span>
+                <span><a style="color: yellow" href="#">S</a></span>
+            </div>
+            <div class="nav-menu">
+            <ul class="ul-menu">
+                <li><a href="index.html"><h4>Home</h4></a></li>
+                <li><a href="lifefact.html"><h4>LifeFacts</h4></a></li>
+                <li><a href="about.html"><h4>About Us</h4></a></li>
+                <li><a href="contact.html"><h4>Contact Us</h4></a></li>
+            </ul>
+        </div>
+            <div class="search-bar">
+                <input type="text" name="search" id="inputQuote" placeholder="Search any quotes..." >
+                <i class="fa fa-search" id="search-quote" onclick="searchQuote()"></i>
+                
+            </div>
+            <div class="menu">
+            <i class="bx bx-menu-alt-right menu-icon" id="menubtn"></i>
+            <div id="display"></div>
+        </div>
+        </nav>
+    </header>
+    <div class="div-display">
+        <h1>Search Result:</h1>
+        <p id="searchResult"></p>
+        <p id="searchLink"></p>
+    </div>
+
+    <script src="general.js"></script>
+
+    <script>
+
+        // adding click event to the menu-icon
+const menuIcon = document.querySelector('.menu-icon');
+const navMenu = document.querySelector('.ul-menu');
+
+menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle("active");
+    
+});
+
+// close menu after clicking on a link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove("active");
+    });
+
+});
+
+// This is for search quotes result 
+        
+// function searchQuote() {
+//     let inputQuote = document.getElementById('inputQuote').value;
+//     if (inputQuote.trim() !== '') {
+//         window.location.href = `anyquotes.html?query=${encodeURIComponent(inputQuote)}`;
+//     }
+// }
+
+        // function getQueryParameter(name) {
+        //     const urlParams = new URLSearchParams(window.location.search);
+        //     return urlParams.get(name);
+        // }
+        // let searchQuery = getQueryParameter('query');
+        // console.log(searchQuery);
+        // if (searchQuery) {
+        // document.getElementById('searchResult').textContent = searchQuery;
+        // } else {
+        //     document.getElementById('searchResult').textContent = 'No search term provided.';
+        // }
+
+        window.onload = function () {
+        function getQueryParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    let searchQuery = getQueryParameter('query');
+    console.log(searchQuery); // Debugging
+
+    let resultElement = document.getElementById('searchResult');
+    let linkElement = document.getElementById('searchLink'); // Reference to the new link element
+
+    if (resultElement) {
+        resultElement.textContent = searchQuery ? searchQuery : 'No search term provided.';
+    }
+
+    // Generate a Google search link
+    if (searchQuery && linkElement) {
+        let searchURL = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+        linkElement.innerHTML = `<a href="${searchURL}" target="_blank">🔗 View Related Search</a>`;
+    }
+};
+        
+    </script>
+</body>
+</html>
