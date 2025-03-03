@@ -1,88 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <title>Lab Phase Project</title>
-    <link rel="stylesheet" href="lifefact.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<title>Lab Phase Project</title>
+<link rel="stylesheet" href="lifefact.css">
+<style>
+    .about-container {
+        background-image: url(about2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 10px;
+        
+    }
+    .random-quote h4 {
+        margin-top: 10px;
+    }
+    .random-quote p {
+        padding: 10px;
+        color: rgb(25, 26, 22);
+        
+    }
+    .random-quote button {
+        padding: 7px;
+        border-radius: 10px;
+        border: none;
+        color: navy;
+        background: palevioletred;
+        cursor: pointer;
+    }
+    .txt-container {
+        padding: 25px;
+        border: 0px solid blue;
+        background: rgb(183, 178, 178);
+        border-radius: 5px;
+        margin-top: 15px;
+    }
+    .txt-container p {
+        font-size: 25px;
+        color: rgb(42, 39, 39);
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
 </head>
 <body>
-    <!-- The header container -->
+<!-- The header container -->
 
-    <header class="header-container">
-        <nav class="nav-bar">
-            <div class="nav-logo">
-                <!-- <p><a href="#">L.i.F.e.F.a.C.t.S</a></p> -->
-                <span><a style="color: whitesmoke" href="#">L.</a></span>
-                <span><a style="color: blueviolet" href="#">i.</a></span>
-                <span><a style="color: paleturquoise" href="#">F.</a></span>
-                <span><a style="color: red" href="#">e.</a></span>
-                <span><a style="color: greenyellow" href="#">F.</a></span>
-                <span><a style="color: teal" href="#">a.</a></span>
-                <span><a style="color: blue" href="#">C.</a></span>
-                <span><a style="color: brown" href="#">t.</a></span>
-                <span><a style="color: yellow" href="#">S</a></span>
-            </div>
-            <div class="nav-menu">
-            <ul class="ul-menu">
-                <li><a href="index.html"><h4>Home</h4></a></li>
-                <li><a href="lifefact.html"><h4>LifeFacts</h4></a></li>
-                <li><a href="about.html"><h4>About Us</h4></a></li>
-                <li><a href="contact.html"><h4>Contact Us</h4></a></li>
-            </ul>
-        </div>
-            <div class="search-bar">
-                <input type="text" id="inputQuote" name="search" placeholder="Search any quotes..." >
-                <i class="fa fa-search" id="search-quote" onclick="searchQuote()"></i>
-                
-            </div>
-            <div class="menu">
-            <i class="bx bx-menu-alt-right menu-icon" id="menubtn"></i>
-            <div id="display"></div>
-        </div>
-        </nav>
-    </header>
-    <p style="padding: 40%; color: red; background-image: url(construction\ 3.jpg); background-repeat: no-repeat;">THIS SITE IS UNDER CONSTRUCTION. CHECK BACK LATER! <i class="fa fa-thumbs-up"></i></p>
-        
-
-
-    <footer>
-        <div class="first-footer">
-            <p class="follow-text">To always stay motivated and inspired.
-                <br> Kindly follow and subscribe to our socials.</p>
-        <i class='bx bxl-youtube'> @drphizzle</i> 
-        <p><i class='bx bxl-tiktok' > @drphizzle</i></p>
-        <p><i class='bx bxl-instagram' > @drphizzle123</i></p>
-        </div>
-        <div class="footer-logo">
+<header class="header-container">
+    <nav class="nav-bar">
+        <div class="nav-logo">
+            <!-- <p><a href="#">L.i.F.e.F.a.C.t.S</a></p> -->
             <span><a style="color: whitesmoke" href="#">L.</a></span>
-                        <span><a style="color: blueviolet" href="#">i.</a></span>
-                        <span><a style="color: paleturquoise" href="#">F.</a></span>
-                        <span><a style="color: red" href="#">e.</a></span>
-                        <span><a style="color: greenyellow" href="#">F.</a></span>
-                        <span><a style="color: teal" href="#">a.</a></span>
-                        <span><a style="color: blue" href="#">C.</a></span>
-                        <span><a style="color: brown" href="#">t.</a></span>
-                        <span><a style="color: yellow" href="#">S</a></span>
-                        
-        
+            <span><a style="color: blueviolet" href="#">i.</a></span>
+            <span><a style="color: paleturquoise" href="#">F.</a></span>
+            <span><a style="color: red" href="#">e.</a></span>
+            <span><a style="color: greenyellow" href="#">F.</a></span>
+            <span><a style="color: teal" href="#">a.</a></span>
+            <span><a style="color: blue" href="#">C.</a></span>
+            <span><a style="color: brown" href="#">t.</a></span>
+            <span><a style="color: yellow" href="#">S</a></span>
         </div>
-        <div class="footer-links">
-            <p><a href="index.html"><h5>Home</h5></a></p>
-            <p><a href="contact.html"><h5>Contact</h5></a></p>
-            <p><a href="about.html"><h5>About</h5></a></p>
+        <div class="nav-menu">
+        <ul class="ul-menu">
+            <li><a href="index.html"><h4>Home</h4></a></li>
+            <li><a href="lifefact.html"><h4>LifeFacts</h4></a></li>
+            <li><a href="about.html"><h4>About Us</h4></a></li>
+            <li><a href="contact.html"><h4>Contact Us</h4></a></li>
+        </ul>
+    </div>
+        <div class="search-bar">
+            <input type="text" id="inputQuote" name="search" placeholder="Search any quotes..." >
+            <i class="fa fa-search" id="search-quote" onclick="searchQuote()"></i>
             
         </div>
-        <p class="copyright">
-            Copyright &copy; 2025 All rights reserved.</p>
-        
-        </footer>
-
+        <div class="menu">
+        <i class="bx bx-menu-alt-right menu-icon" id="menubtn"></i>
+        <div id="display"></div>
+    </div>
+    </nav>
+</header>
+<div class="about-container">
+    <div class="random-quote">
+        <h4>Random Quote:</h4>
+        <p id="quote">Loading...</p>
+    <button onclick="fetchQuote()">Get Another Quote</button>
+    </div>
+    <div class="txt-container">
+        <p>This site is created to keep you motivated, inspired and going strong, knowing that you're not alone in this journey. Because everyone is going through one struggle or the other. So know that and know peace...</p>
+    </div>
     
-    <script src="menu.js"></script>
-    <script src="general.js"></script>
+</div>
+    
+
+
+<footer>
+    <div class="first-footer">
+        <p class="follow-text">To always stay motivated and inspired.
+            <br> Kindly follow and subscribe to our socials.</p>
+    <i class='bx bxl-youtube'> @drphizzle</i> 
+    <p><i class='bx bxl-tiktok' > @drphizzle</i></p>
+    <p><i class='bx bxl-instagram' > @drphizzle123</i></p>
+    </div>
+    <div class="footer-logo">
+        <span><a style="color: whitesmoke" href="#">L.</a></span>
+                    <span><a style="color: blueviolet" href="#">i.</a></span>
+                    <span><a style="color: paleturquoise" href="#">F.</a></span>
+                    <span><a style="color: red" href="#">e.</a></span>
+                    <span><a style="color: greenyellow" href="#">F.</a></span>
+                    <span><a style="color: teal" href="#">a.</a></span>
+                    <span><a style="color: blue" href="#">C.</a></span>
+                    <span><a style="color: brown" href="#">t.</a></span>
+                    <span><a style="color: yellow" href="#">S</a></span>
+                    
+    
+    </div>
+    <div class="footer-links">
+        <p><a href="index.html"><h5>Home</h5></a></p>
+        <p><a href="contact.html"><h5>Contact</h5></a></p>
+        <p><a href="about.html"><h5>About</h5></a></p>
+        
+    </div>
+    <p class="copyright">
+        Copyright &copy; 2025 All rights reserved.</p>
+    
+    </footer>
+
+    <script>
+        function fetchQuote() {
+            fetch("https://api.quotable.io/random")
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("quote").innerText = data.content;
+                })
+                .catch(error => console.error("Error fetching data:", error));
+        }
+
+        // Fetch a quote when the page loads
+        fetchQuote();
+    </script>
+<script src="menu.js"></script>
+<script src="general.js"></script>
 </body>
 </html>
